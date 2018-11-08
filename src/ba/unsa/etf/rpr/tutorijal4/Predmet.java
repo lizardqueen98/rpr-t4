@@ -1,3 +1,5 @@
+package ba.unsa.etf.rpr.tutorijal4;
+
 public class Predmet {
     private String naziv;
     private int sifra,ects_bodovi;

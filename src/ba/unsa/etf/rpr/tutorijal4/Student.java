@@ -1,3 +1,5 @@
+package ba.unsa.etf.rpr.tutorijal4;
+
 public class Student {
     private String ime,prezime;
     private int broj_indeksa;
