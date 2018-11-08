@@ -11,8 +11,8 @@ public class PlanStudija {
     public PlanStudija(){
         m = new HashMap<Integer, Set<Predmet>>();
     }
-    public void dodajSemestar(int i, Set<Predmet> s){
-        m.put(i,s);
+    public void dodajSemestar(int i){
+        m.put(i,new TreeSet<>());
     }
     public void dodajPredmetUSemestar(int i,Predmet p){
         for(HashMap.Entry<Integer,Set<Predmet>> entry : m.entrySet()){
