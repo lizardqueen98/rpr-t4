@@ -1,11 +1,12 @@
 public class Predmet {
     private String naziv;
     private int sifra,ects_bodovi;
-    private Student[] studenti;
     private boolean izborni;
-    private int broj_upisanih;
-    public Predmet(String naziv,int sifra, int ects_bodovi, boolean izborni){
-        broj_upisanih=0;
+    public Predmet(String naziv, int sifra, int ects_bodovi, boolean izborni){
+        this.naziv=naziv;
+        this.sifra=sifra;
+        this.ects_bodovi=ects_bodovi;
+        this.izborni=izborni;
     }
 
     public int getSifra() {
@@ -22,13 +23,7 @@ public class Predmet {
     public void getSpisakStudenata(){
 
     }
-    public void upisiStudenta(Student s){
-
-    }
-    public boolean daLiJeUpisan(Student s){
-        return true;
-    }
-    public void ispisiStudenta(Student s){
-
+    public boolean daLiJeIzborni(){
+        return izborni;
     }
 }
