@@ -1,9 +1,10 @@
 public class Student {
     private String ime,prezime;
     private int broj_indeksa;
-    private int[] predmeti_sifra;
     public Student(String ime, String prezime, int broj_indeksa){
-
+        this.ime = ime;
+        this.prezime = prezime;
+        this.broj_indeksa = broj_indeksa;
     }
 
     public String getIme() {
