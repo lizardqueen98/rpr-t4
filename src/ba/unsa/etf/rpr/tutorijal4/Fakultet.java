@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Fakultet {
-    //moramo napraviti compareTo metode da biso ubacivali u treeset
+    //moramo napraviti compareTo metode da bismo ubacivali u treeset
     private Set<Student> studenti;
     private Set<Predmet> predmeti;
     private Set<Upis> upisani;
@@ -20,7 +20,9 @@ public class Fakultet {
         predmeti.add(p);
     }
     public void upisi(Student s, Predmet p, PlanStudija ps){
-        upisani.add(new Upis(s,p,ps));
+        for(Student student : studenti) if(student.equals(s)){
+            for(Predmet predmet : predmeti) if(predmet.equals(p)) upisani.add(new Upis(student,predmet,ps));
+        };
     }
     public void getSpisakStudenata(Predmet p){
         for(Upis u : upisani){
